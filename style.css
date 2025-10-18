@@ -1,0 +1,132 @@
+* {
+    font-family: 'Onest', sans-serif;
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #0d1321;
+    color: #f0ebd8;
+}
+
+/* Contenedor principal de dos columnas */
+.calculadora-log {
+    max-width: 800px; 
+    margin: 0 auto;
+    display: flex;
+    gap: 20px; 
+}
+
+/* Columna izquierda - Calculadora */
+.calculadora {
+    flex: 1;
+    background: #1d2d44;
+    padding: 20px; 
+    border-radius: 10px;
+    max-width: 350px; 
+    height: 500px; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Columna derecha - Historial */
+.historial {
+    flex: 1;
+    background: #1d2d44;
+    padding: 20px; 
+    border-radius: 10px;
+    max-width: 350px; 
+    height: 500px; 
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    color: #f0ebd8;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+h3 {
+    text-align: center;
+    color: #f0ebd8;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #3e5c76;
+    background-color: #748cab;
+    color: #0d1321;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+input::placeholder {
+    color: #1d2d44;
+}
+
+.botones {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    background-color: #3e5c76;
+    color: #f0ebd8;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #748cab;
+    color: #0d1321;
+}
+
+#resultado {
+    background: #748cab;
+    color: #0d1321;
+    padding: 20px;
+    border: 2px solid #3e5c76;
+    margin: 20px 0;
+    min-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+#log {
+    list-style: none;
+    padding: 10px;
+    height: 360px; 
+    overflow-y: auto;
+    border: 2px solid #3e5c76;
+    border-radius: 5px;
+    background-color: #0d1321;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .calculadora-log {
+        flex-direction: column;
+    }
+    
+    .calculadora,
+    .historial {
+        max-width: 100%;
+    }
+}

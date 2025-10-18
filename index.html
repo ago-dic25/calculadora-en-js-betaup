@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Play:wght@400;700&family=Walter+Turncoat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="calculadora-log">
+        <!-- Columna izquierda - Calculadora -->
+        <div class="calculadora">
+            <h1>Calculadora</h1>
+            
+            <input type="number" id="numero1" placeholder="Primer número">
+            <input type="number" id="numero2" placeholder="Segundo número">
+            
+            <div class="botones">
+                <button onclick="calcular('suma')">Sumar</button>
+                <button onclick="calcular('resta')">Restar</button>
+                <button onclick="calcular('multiplicacion')">Multiplicar</button>
+                <button onclick="calcular('division')">Dividir</button>
+            </div>
+            
+            <div id="resultado"></div>
+        </div>
+        
+        <!-- Columna derecha - Historial -->
+        <div class="historial">
+            <h3>Historial</h3>
+            <ul id="log"></ul>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
